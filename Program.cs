@@ -43,17 +43,22 @@
             if (tasks.Count == 0)
             {
                 Console.WriteLine("Задачи отсутствуют.");
+                Console.WriteLine();
+                Console.WriteLine("--------------------");
                 return;
             }
 
             for (int i = 0; i < tasks.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {tasks[i]}");
+                Console.WriteLine();
+                Console.WriteLine("--------------------");
             }
         }
 
         static void AddTask()
         {
+            Console.Clear();
             Console.Write("Введите задачу: ");
             string task = Console.ReadLine();
             tasks.Add(task);
